@@ -21,24 +21,24 @@ namespace Trivial
             TxtCapital2.Clear();
             TxtCapital3.Clear();
             TxtCapital4.Clear();
-            
+            fillTxt();
         }
-
         public void fillTxt()
         {
-            TextBox[] cajas = { TxtCapital1, TxtCapital2, TxtCapital3, TxtCapital4 };
+            TextBox[] txtEntries = {TxtCapital1, TxtCapital2, TxtCapital3, TxtCapital4};
 
-            for (int i = 0;i<cajas.Length;i++)
+            // compruebas si esta en una caja de texto
+            for (int i = 0;i<txtEntries.Length;i++)
             {
-                Random aleatori = new Random();
-                int indiceCapitales = aleatori.Next(0, capitales.Length);
-                //MessageBox.Show(indiceCapitales.ToString());
-                if (string.IsNullOrEmpty(cajas[i].Text) && !TxtCapital1.Text.Equals(capitales[indiceCapitales]) && !TxtCapital2.Text.Equals(capitales[indiceCapitales])
-                    && !TxtCapital3.Text.Equals(capitales[indiceCapitales]) && !TxtCapital4.Text.Equals(capitales[indiceCapitales]))
+                Random ale = new Random();
+                int capitalAleatoria = ale.Next(0, capitales.Length);
+
+                if (txtEntries[i].Text.Equals(" "))
                 {
-                    cajas[i].Text = capitales[indiceCapitales];
+                    txtEntries[i].Text = capitales[capitalAleatoria];
                 }
             }
+            // si está no se pone
 
 
         }
@@ -58,27 +58,29 @@ namespace Trivial
             //Sacar pais aleatorio y mostrarlo en el txt
             Random aleatorio = new Random();
             int numeroAleatorio = aleatorio.Next(0, paises.Length);
-            TxtPais.Text = paises[numeroAleatorio];
+            string paisAleatorio = paises[numeroAleatorio];
+            TxtPais.Text = paisAleatorio;
 
             //Sacar la respuesta correcta y mostrarlo en el txt aleatoriamente
             string respuestaCorrecta = capitales[numeroAleatorio];
-            int cajaAleatoria = aleatorio.Next(0, 4);
-            switch (cajaAleatoria)
+            string[] txtEntries = { "TxtCapital1", "TxtCapital2", "TxtCapital3", "TxtCapital4" };
+            int cajaAleatoria = aleatorio.Next(0, txtEntries.Length);
+            switch (txtEntries[cajaAleatoria])
             {
-                case 0:
+                case "TxtCapital1":
                     TxtCapital1.Text = respuestaCorrecta;
                     break;
-                case 1:
+                case "TxtCapital2":
                     TxtCapital2.Text = respuestaCorrecta;
                     break;
-                case 2:
+                case "TxtCapital3":
                     TxtCapital3.Text = respuestaCorrecta;
                     break;
-                case 3:
+                case "TxtCapital4":
                     TxtCapital4.Text = respuestaCorrecta;
                     break;
             }
-            fillTxt();
+            
 
         }
 
