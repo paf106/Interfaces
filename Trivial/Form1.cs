@@ -16,8 +16,9 @@ namespace Trivial
         string[] capitales = {"Madrid", "Lisboa", "Paris", "Berlín", "Helsinki", "Atenas", "Bruselas", "Bucarest", "Moscu", "Varsovia", "Estocolmo", "Berna"};
 
         int indicePais;
-        int respuestasAcertadas;
-        int totalPreguntas;
+        double respuestasAcertadas = 0;
+        double totalPreguntas = 0;
+        double porcentaje = 0;
 
         /// <summary>
         /// Metodo que limpia todas las cajas de texto para empezar una nueva partida
@@ -39,7 +40,16 @@ namespace Trivial
             respuestasAcertadas = 0;
             totalPreguntas = 0;
 
+            TxtPorcentajeAciertos.Clear();
 
+
+        }
+
+        public void calculatePercentage()
+        {
+            porcentaje = (respuestasAcertadas / totalPreguntas) * 100;
+            int porcentajeInt = (int)porcentaje;
+            TxtPorcentajeAciertos.Text = porcentajeInt.ToString() + "%";
         }
         /// <summary>
         /// Metodo que rellena las cajas de texto con capitales aleatorias
@@ -145,15 +155,15 @@ namespace Trivial
             {
                 TxtCapital1.BackColor = Color.Green;
                 respuestasAcertadas++;
-                totalPreguntas++;
             }
             else
             {
                 TxtCapital1.BackColor = Color.Red;
                 TxtCapital1.Text = "INCORRECTO";
-                totalPreguntas++;
             }
+            totalPreguntas++;
             BtnSiguente.Enabled = true;
+            calculatePercentage();
         }
 
         private void TxtCapital2_TextChanged(object sender, EventArgs e)
@@ -162,15 +172,15 @@ namespace Trivial
             {
                 TxtCapital2.BackColor = Color.Green;
                 respuestasAcertadas++;
-                totalPreguntas++;
             }
             else
             {
                 TxtCapital2.BackColor = Color.Red;
                 TxtCapital2.Text = "INCORRECTO";
-                totalPreguntas++;
             }
+            totalPreguntas++;
             BtnSiguente.Enabled = true;
+            calculatePercentage();
         }
 
         private void TxtCapital3_TextChanged(object sender, EventArgs e)
@@ -179,15 +189,15 @@ namespace Trivial
             {
                 TxtCapital3.BackColor = Color.Green;
                 respuestasAcertadas++;
-                totalPreguntas++;
             }
             else
             {
                 TxtCapital3.BackColor = Color.Red;
                 TxtCapital3.Text = "INCORRECTO";
-                totalPreguntas++;
             }
+            totalPreguntas++;
             BtnSiguente.Enabled = true;
+            calculatePercentage();
         }
 
         private void TxtCapital4_TextChanged(object sender, EventArgs e)
@@ -196,15 +206,15 @@ namespace Trivial
             {
                 TxtCapital4.BackColor = Color.Green;
                 respuestasAcertadas++;
-                totalPreguntas++;
             }
             else
             {
                 TxtCapital4.BackColor = Color.Red;
                 TxtCapital4.Text = "INCORRECTO";
-                totalPreguntas++;
             }
+            totalPreguntas++;
             BtnSiguente.Enabled = true;
+            calculatePercentage();
         }
 
         private void BtnSiguente_Click(object sender, EventArgs e)

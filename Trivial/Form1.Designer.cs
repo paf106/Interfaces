@@ -149,12 +149,13 @@
             this.LblCapital.AutoSize = true;
             this.LblCapital.Location = new System.Drawing.Point(75, 84);
             this.LblCapital.Name = "LblCapital";
-            this.LblCapital.Size = new System.Drawing.Size(42, 13);
+            this.LblCapital.Size = new System.Drawing.Size(53, 13);
             this.LblCapital.TabIndex = 3;
-            this.LblCapital.Text = "Capital:";
+            this.LblCapital.Text = "Capitales:";
             // 
             // TxtCapital1
             // 
+            this.TxtCapital1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TxtCapital1.Location = new System.Drawing.Point(48, 109);
             this.TxtCapital1.Name = "TxtCapital1";
             this.TxtCapital1.ReadOnly = true;
@@ -164,6 +165,7 @@
             // 
             // TxtCapital2
             // 
+            this.TxtCapital2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TxtCapital2.Location = new System.Drawing.Point(48, 135);
             this.TxtCapital2.Name = "TxtCapital2";
             this.TxtCapital2.ReadOnly = true;
@@ -173,6 +175,7 @@
             // 
             // TxtCapital3
             // 
+            this.TxtCapital3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TxtCapital3.Location = new System.Drawing.Point(48, 161);
             this.TxtCapital3.Name = "TxtCapital3";
             this.TxtCapital3.ReadOnly = true;
@@ -182,6 +185,7 @@
             // 
             // TxtCapital4
             // 
+            this.TxtCapital4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TxtCapital4.Location = new System.Drawing.Point(48, 187);
             this.TxtCapital4.Name = "TxtCapital4";
             this.TxtCapital4.ReadOnly = true;
@@ -193,13 +197,13 @@
             // 
             this.TxtPorcentajeAciertos.Location = new System.Drawing.Point(96, 228);
             this.TxtPorcentajeAciertos.Name = "TxtPorcentajeAciertos";
-            this.TxtPorcentajeAciertos.Size = new System.Drawing.Size(23, 20);
+            this.TxtPorcentajeAciertos.Size = new System.Drawing.Size(32, 20);
             this.TxtPorcentajeAciertos.TabIndex = 8;
             // 
             // BtnSiguente
             // 
             this.BtnSiguente.Enabled = false;
-            this.BtnSiguente.Location = new System.Drawing.Point(125, 228);
+            this.BtnSiguente.Location = new System.Drawing.Point(130, 225);
             this.BtnSiguente.Name = "BtnSiguente";
             this.BtnSiguente.Size = new System.Drawing.Size(75, 23);
             this.BtnSiguente.TabIndex = 9;
