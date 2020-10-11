@@ -33,11 +33,11 @@
             this.MnuNueva = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuOpciones = new System.Windows.Forms.ToolStripMenuItem();
-            this.nombreCapitalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nombrePaisesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MnuNombreCapitales = new System.Windows.Forms.ToolStripMenuItem();
+            this.MnuNombrePaises = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.multiplesOpcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.escribirRespuestaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MnuMultiplesOpciones = new System.Windows.Forms.ToolStripMenuItem();
+            this.MnuEscribirRespuesta = new System.Windows.Forms.ToolStripMenuItem();
             this.LblPais = new System.Windows.Forms.Label();
             this.TxtPais = new System.Windows.Forms.TextBox();
             this.LblCapital = new System.Windows.Forms.Label();
@@ -74,57 +74,65 @@
             // MnuNueva
             // 
             this.MnuNueva.Name = "MnuNueva";
-            this.MnuNueva.Size = new System.Drawing.Size(108, 22);
+            this.MnuNueva.Size = new System.Drawing.Size(180, 22);
             this.MnuNueva.Text = "Nueva";
             this.MnuNueva.Click += new System.EventHandler(this.nuevaToolStripMenuItem_Click);
             // 
             // MnuSalir
             // 
             this.MnuSalir.Name = "MnuSalir";
-            this.MnuSalir.Size = new System.Drawing.Size(108, 22);
+            this.MnuSalir.Size = new System.Drawing.Size(180, 22);
             this.MnuSalir.Text = "Salir";
-            this.MnuSalir.Click += new System.EventHandler(this.MnuSalir_Click);
+            this.MnuSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // MnuOpciones
             // 
             this.MnuOpciones.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nombreCapitalesToolStripMenuItem,
-            this.nombrePaisesToolStripMenuItem,
+            this.MnuNombreCapitales,
+            this.MnuNombrePaises,
             this.toolStripMenuItem1,
-            this.multiplesOpcionesToolStripMenuItem,
-            this.escribirRespuestaToolStripMenuItem});
+            this.MnuMultiplesOpciones,
+            this.MnuEscribirRespuesta});
             this.MnuOpciones.Name = "MnuOpciones";
             this.MnuOpciones.Size = new System.Drawing.Size(69, 20);
             this.MnuOpciones.Text = "Opciones";
             // 
-            // nombreCapitalesToolStripMenuItem
+            // MnuNombreCapitales
             // 
-            this.nombreCapitalesToolStripMenuItem.Name = "nombreCapitalesToolStripMenuItem";
-            this.nombreCapitalesToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
-            this.nombreCapitalesToolStripMenuItem.Text = "Nombre Capitales";
+            this.MnuNombreCapitales.Checked = true;
+            this.MnuNombreCapitales.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.MnuNombreCapitales.Name = "MnuNombreCapitales";
+            this.MnuNombreCapitales.Size = new System.Drawing.Size(180, 22);
+            this.MnuNombreCapitales.Text = "Nombre Capitales";
+            this.MnuNombreCapitales.Click += new System.EventHandler(this.MnuNombreCapitales_Click);
             // 
-            // nombrePaisesToolStripMenuItem
+            // MnuNombrePaises
             // 
-            this.nombrePaisesToolStripMenuItem.Name = "nombrePaisesToolStripMenuItem";
-            this.nombrePaisesToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
-            this.nombrePaisesToolStripMenuItem.Text = "Nombre Paises";
+            this.MnuNombrePaises.Name = "MnuNombrePaises";
+            this.MnuNombrePaises.Size = new System.Drawing.Size(180, 22);
+            this.MnuNombrePaises.Text = "Nombre Paises";
+            this.MnuNombrePaises.Click += new System.EventHandler(this.MnuNombrePaises_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(171, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
             // 
-            // multiplesOpcionesToolStripMenuItem
+            // MnuMultiplesOpciones
             // 
-            this.multiplesOpcionesToolStripMenuItem.Name = "multiplesOpcionesToolStripMenuItem";
-            this.multiplesOpcionesToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
-            this.multiplesOpcionesToolStripMenuItem.Text = "Multiples opciones";
+            this.MnuMultiplesOpciones.Checked = true;
+            this.MnuMultiplesOpciones.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.MnuMultiplesOpciones.Name = "MnuMultiplesOpciones";
+            this.MnuMultiplesOpciones.Size = new System.Drawing.Size(180, 22);
+            this.MnuMultiplesOpciones.Text = "Multiples opciones";
+            this.MnuMultiplesOpciones.Click += new System.EventHandler(this.MnuMultiplesOpciones_Click);
             // 
-            // escribirRespuestaToolStripMenuItem
+            // MnuEscribirRespuesta
             // 
-            this.escribirRespuestaToolStripMenuItem.Name = "escribirRespuestaToolStripMenuItem";
-            this.escribirRespuestaToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
-            this.escribirRespuestaToolStripMenuItem.Text = "Escribir respuesta";
+            this.MnuEscribirRespuesta.Name = "MnuEscribirRespuesta";
+            this.MnuEscribirRespuesta.Size = new System.Drawing.Size(180, 22);
+            this.MnuEscribirRespuesta.Text = "Escribir respuesta";
+            this.MnuEscribirRespuesta.Click += new System.EventHandler(this.MnuEscribirRespuesta_Click);
             // 
             // LblPais
             // 
@@ -255,11 +263,11 @@
         private System.Windows.Forms.ToolStripMenuItem MnuNueva;
         private System.Windows.Forms.ToolStripMenuItem MnuSalir;
         private System.Windows.Forms.ToolStripMenuItem MnuOpciones;
-        private System.Windows.Forms.ToolStripMenuItem nombreCapitalesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nombrePaisesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem MnuNombreCapitales;
+        private System.Windows.Forms.ToolStripMenuItem MnuNombrePaises;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem multiplesOpcionesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem escribirRespuestaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem MnuMultiplesOpciones;
+        private System.Windows.Forms.ToolStripMenuItem MnuEscribirRespuesta;
         private System.Windows.Forms.Label LblPais;
         private System.Windows.Forms.TextBox TxtPais;
         private System.Windows.Forms.Label LblCapital;
