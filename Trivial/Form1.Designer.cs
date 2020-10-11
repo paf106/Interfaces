@@ -74,14 +74,14 @@
             // MnuNueva
             // 
             this.MnuNueva.Name = "MnuNueva";
-            this.MnuNueva.Size = new System.Drawing.Size(180, 22);
+            this.MnuNueva.Size = new System.Drawing.Size(108, 22);
             this.MnuNueva.Text = "Nueva";
             this.MnuNueva.Click += new System.EventHandler(this.nuevaToolStripMenuItem_Click);
             // 
             // MnuSalir
             // 
             this.MnuSalir.Name = "MnuSalir";
-            this.MnuSalir.Size = new System.Drawing.Size(180, 22);
+            this.MnuSalir.Size = new System.Drawing.Size(108, 22);
             this.MnuSalir.Text = "Salir";
             this.MnuSalir.Click += new System.EventHandler(this.MnuSalir_Click);
             // 
@@ -100,30 +100,30 @@
             // nombreCapitalesToolStripMenuItem
             // 
             this.nombreCapitalesToolStripMenuItem.Name = "nombreCapitalesToolStripMenuItem";
-            this.nombreCapitalesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nombreCapitalesToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.nombreCapitalesToolStripMenuItem.Text = "Nombre Capitales";
             // 
             // nombrePaisesToolStripMenuItem
             // 
             this.nombrePaisesToolStripMenuItem.Name = "nombrePaisesToolStripMenuItem";
-            this.nombrePaisesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nombrePaisesToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.nombrePaisesToolStripMenuItem.Text = "Nombre Paises";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(171, 6);
             // 
             // multiplesOpcionesToolStripMenuItem
             // 
             this.multiplesOpcionesToolStripMenuItem.Name = "multiplesOpcionesToolStripMenuItem";
-            this.multiplesOpcionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.multiplesOpcionesToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.multiplesOpcionesToolStripMenuItem.Text = "Multiples opciones";
             // 
             // escribirRespuestaToolStripMenuItem
             // 
             this.escribirRespuestaToolStripMenuItem.Name = "escribirRespuestaToolStripMenuItem";
-            this.escribirRespuestaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.escribirRespuestaToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.escribirRespuestaToolStripMenuItem.Text = "Escribir respuesta";
             // 
             // LblPais
@@ -157,29 +157,37 @@
             // 
             this.TxtCapital1.Location = new System.Drawing.Point(48, 109);
             this.TxtCapital1.Name = "TxtCapital1";
+            this.TxtCapital1.ReadOnly = true;
             this.TxtCapital1.Size = new System.Drawing.Size(100, 20);
             this.TxtCapital1.TabIndex = 4;
+            this.TxtCapital1.Click += new System.EventHandler(this.TxtCapital1_TextChanged);
             // 
             // TxtCapital2
             // 
             this.TxtCapital2.Location = new System.Drawing.Point(48, 135);
             this.TxtCapital2.Name = "TxtCapital2";
+            this.TxtCapital2.ReadOnly = true;
             this.TxtCapital2.Size = new System.Drawing.Size(100, 20);
             this.TxtCapital2.TabIndex = 5;
+            this.TxtCapital2.Click += new System.EventHandler(this.TxtCapital2_TextChanged);
             // 
             // TxtCapital3
             // 
             this.TxtCapital3.Location = new System.Drawing.Point(48, 161);
             this.TxtCapital3.Name = "TxtCapital3";
+            this.TxtCapital3.ReadOnly = true;
             this.TxtCapital3.Size = new System.Drawing.Size(100, 20);
             this.TxtCapital3.TabIndex = 6;
+            this.TxtCapital3.Click += new System.EventHandler(this.TxtCapital3_TextChanged);
             // 
             // TxtCapital4
             // 
             this.TxtCapital4.Location = new System.Drawing.Point(48, 187);
             this.TxtCapital4.Name = "TxtCapital4";
+            this.TxtCapital4.ReadOnly = true;
             this.TxtCapital4.Size = new System.Drawing.Size(100, 20);
             this.TxtCapital4.TabIndex = 7;
+            this.TxtCapital4.Click += new System.EventHandler(this.TxtCapital4_TextChanged);
             // 
             // TxtPorcentajeAciertos
             // 
@@ -190,12 +198,14 @@
             // 
             // BtnSiguente
             // 
+            this.BtnSiguente.Enabled = false;
             this.BtnSiguente.Location = new System.Drawing.Point(125, 228);
             this.BtnSiguente.Name = "BtnSiguente";
             this.BtnSiguente.Size = new System.Drawing.Size(75, 23);
             this.BtnSiguente.TabIndex = 9;
             this.BtnSiguente.Text = "Siguiente";
             this.BtnSiguente.UseVisualStyleBackColor = true;
+            this.BtnSiguente.Click += new System.EventHandler(this.BtnSiguente_Click);
             // 
             // BtnSalir
             // 
@@ -205,6 +215,7 @@
             this.BtnSalir.TabIndex = 10;
             this.BtnSalir.Text = "Salir";
             this.BtnSalir.UseVisualStyleBackColor = true;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // FrmPrincipal
             // 

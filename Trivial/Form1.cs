@@ -12,52 +12,56 @@ namespace Trivial
 {
     public partial class FrmPrincipal : Form
     {
-        string[] paises = {"España", "Portugal", "Francia", "Alemania", "Finlandia","Grecia","Belgica", "Rumania", "Rusia"};
-        string[] capitales = {"Madrid", "Lisboa", "Paris", "Berlín", "Helsinki", "Atenas", "Bruselas", "Bucarest", "Moscu"};
+        string[] paises = {"España", "Portugal", "Francia", "Alemania", "Finlandia","Grecia","Belgica", "Rumania", "Rusia","Polonia","Suecia", "Suiza"};
+        string[] capitales = {"Madrid", "Lisboa", "Paris", "Berlín", "Helsinki", "Atenas", "Bruselas", "Bucarest", "Moscu", "Varsovia", "Estocolmo", "Berna"};
 
+        int indicePais;
+        int respuestasAcertadas;
+        int totalPreguntas;
+
+        /// <summary>
+        /// Metodo que limpia todas las cajas de texto para empezar una nueva partida
+        /// </summary>
         public void newGame()
         {
             TxtCapital1.Clear();
             TxtCapital2.Clear();
             TxtCapital3.Clear();
             TxtCapital4.Clear();
-            
-        }
 
-        public void fillTxt()
-        {
-            TextBox[] cajas = { TxtCapital1, TxtCapital2, TxtCapital3, TxtCapital4 };
+            TxtCapital1.BackColor = SystemColors.Control;
+            TxtCapital2.BackColor = SystemColors.Control;
+            TxtCapital3.BackColor = SystemColors.Control;
+            TxtCapital4.BackColor = SystemColors.Control;
 
-            for (int i = 0;i<cajas.Length;i++)
-            {
-                Random aleatori = new Random();
-                int indiceCapitales = aleatori.Next(0, capitales.Length);
-                //MessageBox.Show(indiceCapitales.ToString());
-                if (string.IsNullOrEmpty(cajas[i].Text) && !TxtCapital1.Text.Equals(capitales[indiceCapitales]) && !TxtCapital2.Text.Equals(capitales[indiceCapitales])
-                    && !TxtCapital3.Text.Equals(capitales[indiceCapitales]) && !TxtCapital4.Text.Equals(capitales[indiceCapitales]))
-                {
-                    cajas[i].Text = capitales[indiceCapitales];
-                }
-            }
+            BtnSiguente.Enabled = false;
+
+            respuestasAcertadas = 0;
+            totalPreguntas = 0;
 
 
         }
-        public FrmPrincipal()
+        /// <summary>
+        /// Metodo que rellena las cajas de texto con capitales aleatorias
+        /// </summary>
+        public void fillTxtBoxes()
         {
-            InitializeComponent();
-        }
+            TxtCapital1.Clear();
+            TxtCapital2.Clear();
+            TxtCapital3.Clear();
+            TxtCapital4.Clear();
 
-        private void FrmPrincipal_Load(object sender, EventArgs e)
-        {
+            TxtCapital1.BackColor = SystemColors.Control;
+            TxtCapital2.BackColor = SystemColors.Control;
+            TxtCapital3.BackColor = SystemColors.Control;
+            TxtCapital4.BackColor = SystemColors.Control;
 
-        }
+            BtnSiguente.Enabled = false;
 
-        private void nuevaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            newGame();
             //Sacar pais aleatorio y mostrarlo en el txt
             Random aleatorio = new Random();
             int numeroAleatorio = aleatorio.Next(0, paises.Length);
+            indicePais = numeroAleatorio;
             TxtPais.Text = paises[numeroAleatorio];
 
             //Sacar la respuesta correcta y mostrarlo en el txt aleatoriamente
@@ -78,8 +82,51 @@ namespace Trivial
                     TxtCapital4.Text = respuestaCorrecta;
                     break;
             }
-            fillTxt();
+            TextBox[] cajas = { TxtCapital1, TxtCapital2, TxtCapital3, TxtCapital4 };
+            do {
+                for (int i = 0; i < cajas.Length; i++)
+                {
+                    int indiceCapitales = aleatorio.Next(0, capitales.Length);
+                    if (string.IsNullOrEmpty(cajas[i].Text) && !TxtCapital1.Text.Equals(capitales[indiceCapitales]) && !TxtCapital2.Text.Equals(capitales[indiceCapitales])
+                        && !TxtCapital3.Text.Equals(capitales[indiceCapitales]) && !TxtCapital4.Text.Equals(capitales[indiceCapitales]))
+                    {
+                        cajas[i].Text = capitales[indiceCapitales];
+                    }
+                }
+            } while (string.IsNullOrEmpty(TxtCapital1.Text) || string.IsNullOrEmpty(TxtCapital2.Text) || string.IsNullOrEmpty(TxtCapital3.Text) || string.IsNullOrEmpty(TxtCapital4.Text));
+            
 
+
+        }
+
+        public bool checkAnswer(TextBox textBox)
+        {
+            if (textBox.Text.Equals(capitales[indicePais]))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
+        } 
+        public FrmPrincipal()
+        {
+            InitializeComponent();
+        }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
+        /// <summary>
+        /// Metodo que crea una nueva partida
+        /// </summary>
+        private void nuevaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            newGame();
+            fillTxtBoxes();
         }
 
         private void MnuSalir_Click(object sender, EventArgs e)
@@ -90,6 +137,84 @@ namespace Trivial
         private void TxtPais_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void TxtCapital1_TextChanged(object sender, EventArgs e)
+        {
+            if (checkAnswer(TxtCapital1))
+            {
+                TxtCapital1.BackColor = Color.Green;
+                respuestasAcertadas++;
+                totalPreguntas++;
+            }
+            else
+            {
+                TxtCapital1.BackColor = Color.Red;
+                TxtCapital1.Text = "INCORRECTO";
+                totalPreguntas++;
+            }
+            BtnSiguente.Enabled = true;
+        }
+
+        private void TxtCapital2_TextChanged(object sender, EventArgs e)
+        {
+            if (checkAnswer(TxtCapital2))
+            {
+                TxtCapital2.BackColor = Color.Green;
+                respuestasAcertadas++;
+                totalPreguntas++;
+            }
+            else
+            {
+                TxtCapital2.BackColor = Color.Red;
+                TxtCapital2.Text = "INCORRECTO";
+                totalPreguntas++;
+            }
+            BtnSiguente.Enabled = true;
+        }
+
+        private void TxtCapital3_TextChanged(object sender, EventArgs e)
+        {
+            if (checkAnswer(TxtCapital3))
+            {
+                TxtCapital3.BackColor = Color.Green;
+                respuestasAcertadas++;
+                totalPreguntas++;
+            }
+            else
+            {
+                TxtCapital3.BackColor = Color.Red;
+                TxtCapital3.Text = "INCORRECTO";
+                totalPreguntas++;
+            }
+            BtnSiguente.Enabled = true;
+        }
+
+        private void TxtCapital4_TextChanged(object sender, EventArgs e)
+        {
+            if (checkAnswer(TxtCapital4))
+            {
+                TxtCapital4.BackColor = Color.Green;
+                respuestasAcertadas++;
+                totalPreguntas++;
+            }
+            else
+            {
+                TxtCapital4.BackColor = Color.Red;
+                TxtCapital4.Text = "INCORRECTO";
+                totalPreguntas++;
+            }
+            BtnSiguente.Enabled = true;
+        }
+
+        private void BtnSiguente_Click(object sender, EventArgs e)
+        {
+            fillTxtBoxes();
+        }
+
+        private void BtnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
