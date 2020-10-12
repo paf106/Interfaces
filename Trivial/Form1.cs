@@ -12,8 +12,8 @@ namespace Trivial
 {
     public partial class FrmPrincipal : Form
     {
-        string[] paises = {"España", "Portugal", "Francia", "Alemania", "Finlandia","Grecia","Belgica", "Rumania", "Rusia","Polonia","Suecia", "Suiza"};
-        string[] capitales = {"Madrid", "Lisboa", "Paris", "Berlín", "Helsinki", "Atenas", "Bruselas", "Bucarest", "Moscu", "Varsovia", "Estocolmo", "Berna"};
+        string[] paises = { "España", "Portugal", "Francia", "Alemania", "Finlandia", "Grecia", "Belgica", "Rumania", "Rusia", "Polonia", "Suecia", "Suiza" };
+        string[] capitales = { "Madrid", "Lisboa", "Paris", "Berlín", "Helsinki", "Atenas", "Bruselas", "Bucarest", "Moscu", "Varsovia", "Estocolmo", "Berna" };
 
         int indicePais;
         double respuestasAcertadas = 0;
@@ -51,11 +51,46 @@ namespace Trivial
             int porcentajeInt = (int)porcentaje;
             TxtPorcentajeAciertos.Text = porcentajeInt.ToString() + "%";
         }
+
+        public void fillEscribirRespuestas()
+        {
+            TxtCapital1.ReadOnly = false;
+
+            TxtCapital1.Clear();
+            TxtCapital1.BackColor = SystemColors.Control;
+
+            if (MnuNombreCapitales.Checked == true && MnuEscribirRespuesta.Checked == true)
+            {
+                LblPais.Text = "Pais:";
+                LblCapital.Text = "Capital:";
+
+                //Sacar pais aleatorio y mostrarlo en el txt
+                Random aleatorio = new Random();
+                int numeroAleatorio = aleatorio.Next(0, paises.Length);
+                indicePais = numeroAleatorio;
+                TxtPais.Text = paises[numeroAleatorio];
+            }
+            else if (MnuNombrePaises.Checked == true && MnuEscribirRespuesta.Checked == true)
+            {
+                LblPais.Text = "Capital:";
+                LblCapital.Text = "Pais:";
+
+                //Sacar capital aleatoria y mostrarlo en el txt
+                Random aleatorio = new Random();
+                int numeroAleatorio = aleatorio.Next(0, capitales.Length);
+                indicePais = numeroAleatorio;
+                TxtPais.Text = capitales[numeroAleatorio];
+            }
+        }
+
         /// <summary>
         /// Metodo que rellena las cajas de texto con capitales aleatorias
         /// </summary>
         public void fillTxtBoxes()
         {
+            LblPais.Text = "Pais:";
+            LblCapital.Text = "Capitales:";
+
             TxtCapital1.Clear();
             TxtCapital2.Clear();
             TxtCapital3.Clear();
@@ -75,7 +110,7 @@ namespace Trivial
             TxtPais.Text = paises[numeroAleatorio];
 
             //Sacar la respuesta correcta y mostrarlo en el txt aleatoriamente
-            string respuestaCorrecta = capitales[numeroAleatorio];
+            string respuestaCorrecta = capitales[indicePais];
             int cajaAleatoria = aleatorio.Next(0, 4);
             switch (cajaAleatoria)
             {
@@ -92,8 +127,10 @@ namespace Trivial
                     TxtCapital4.Text = respuestaCorrecta;
                     break;
             }
+            // escribir las capitales en los cuadros de texto
             TextBox[] cajas = { TxtCapital1, TxtCapital2, TxtCapital3, TxtCapital4 };
-            do {
+            do
+            {
                 for (int i = 0; i < cajas.Length; i++)
                 {
                     int indiceCapitales = aleatorio.Next(0, capitales.Length);
@@ -107,6 +144,9 @@ namespace Trivial
         }
         public void fillTxtBoxesPaises()
         {
+            LblPais.Text = "Capital:";
+            LblCapital.Text = "Paises:";
+
             TxtCapital1.Clear();
             TxtCapital2.Clear();
             TxtCapital3.Clear();
@@ -126,7 +166,7 @@ namespace Trivial
             TxtPais.Text = capitales[numeroAleatorio];
 
             //Sacar la respuesta correcta y mostrarlo en el txt aleatoriamente
-            string respuestaCorrecta = paises[numeroAleatorio];
+            string respuestaCorrecta = paises[indicePais];
             int cajaAleatoria = aleatorio.Next(0, 4);
             switch (cajaAleatoria)
             {
@@ -143,16 +183,17 @@ namespace Trivial
                     TxtCapital4.Text = respuestaCorrecta;
                     break;
             }
+            // Escribir los paises en los cuadros de texto
             TextBox[] cajas = { TxtCapital1, TxtCapital2, TxtCapital3, TxtCapital4 };
             do
             {
                 for (int i = 0; i < cajas.Length; i++)
                 {
-                    int indiceCapitales = aleatorio.Next(0, capitales.Length);
-                    if (string.IsNullOrEmpty(cajas[i].Text) && !TxtCapital1.Text.Equals(capitales[indiceCapitales]) && !TxtCapital2.Text.Equals(capitales[indiceCapitales])
-                        && !TxtCapital3.Text.Equals(capitales[indiceCapitales]) && !TxtCapital4.Text.Equals(capitales[indiceCapitales]))
+                    int indicePaises = aleatorio.Next(0, paises.Length);
+                    if (string.IsNullOrEmpty(cajas[i].Text) && !TxtCapital1.Text.Equals(paises[indicePaises]) && !TxtCapital2.Text.Equals(paises[indicePaises])
+                        && !TxtCapital3.Text.Equals(paises[indicePaises]) && !TxtCapital4.Text.Equals(paises[indicePaises]))
                     {
-                        cajas[i].Text = paises[indiceCapitales];
+                        cajas[i].Text = paises[indicePaises];
                     }
                 }
             } while (string.IsNullOrEmpty(TxtCapital1.Text) || string.IsNullOrEmpty(TxtCapital2.Text) || string.IsNullOrEmpty(TxtCapital3.Text) || string.IsNullOrEmpty(TxtCapital4.Text));
@@ -163,16 +204,60 @@ namespace Trivial
 
         public bool checkAnswer(TextBox textBox)
         {
-            if (textBox.Text.Equals(capitales[indicePais]))
+            if (MnuNombreCapitales.Checked == true && MnuEscribirRespuesta.Checked == true)
             {
-                return true;
+                if (textBox.Text.Equals(capitales[indicePais]))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else if (MnuNombrePaises.Checked == true && MnuEscribirRespuesta.Checked == true)
+            {
+                if (textBox.Text.Equals(paises[indicePais]))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else if (MnuNombreCapitales.Checked == true && MnuMultiplesOpciones.Checked == true)
+            {
+                if (textBox.Text.Equals(capitales[indicePais]))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else if (MnuNombrePaises.Checked == true && MnuMultiplesOpciones.Checked == true)
+            {
+                if (textBox.Text.Equals(paises[indicePais]))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
             }
             else
             {
                 return false;
             }
-            
-        } 
+
+        }
+
+
+
         public FrmPrincipal()
         {
             InitializeComponent();
@@ -187,17 +272,29 @@ namespace Trivial
         /// </summary>
         private void nuevaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(MnuNombreCapitales.Checked == true)
+            if (MnuNombreCapitales.Checked == true && MnuMultiplesOpciones.Checked == true)
             {
                 newGame();
                 fillTxtBoxes();
             }
-            else
+            else if (MnuNombrePaises.Checked == true && MnuMultiplesOpciones.Checked == true)
             {
                 newGame();
                 fillTxtBoxesPaises();
             }
-            
+            else if (MnuNombreCapitales.Checked == true && MnuEscribirRespuesta.Checked == true)
+            {
+                newGame();
+                fillEscribirRespuestas();
+                
+
+            }
+            else if (MnuNombrePaises.Checked == true && MnuEscribirRespuesta.Checked == true)
+            {
+                newGame();
+                fillEscribirRespuestas();
+            }
+
         }
 
         private void MnuSalir_Click(object sender, EventArgs e)
@@ -280,7 +377,19 @@ namespace Trivial
 
         private void BtnSiguente_Click(object sender, EventArgs e)
         {
-            fillTxtBoxes();
+            if (MnuNombreCapitales.Checked == true && MnuMultiplesOpciones.Checked == true)
+            {
+                fillTxtBoxes();
+            }
+            else if(MnuNombrePaises.Checked == true && MnuMultiplesOpciones.Checked == true)
+            {
+                fillTxtBoxesPaises();
+            }
+            else
+            {
+                fillEscribirRespuestas();
+            }
+
         }
 
         private void BtnSalir_Click(object sender, EventArgs e)
@@ -302,14 +411,51 @@ namespace Trivial
 
         private void MnuMultiplesOpciones_Click(object sender, EventArgs e)
         {
+            TxtCapital1.Click += TxtCapital1_TextChanged;
+            TxtCapital1.KeyDown -= TxtCapital1_KeyDown;
+            TxtCapital1.Cursor = Cursors.Hand;
+
             MnuMultiplesOpciones.Checked = true;
             MnuEscribirRespuesta.Checked = false;
-        }
 
+            TxtCapital1.ReadOnly = true;
+            TxtCapital2.Visible = true;
+            TxtCapital3.Visible = true;
+            TxtCapital4.Visible = true;
+        }
+        private void TxtCapital1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (checkAnswer(TxtCapital1))
+                {
+                    TxtCapital1.BackColor = Color.Green;
+                    respuestasAcertadas++;
+                }
+                else
+                {
+                    TxtCapital1.BackColor = Color.Red;
+                    TxtCapital1.Text = "INCORRECTO";
+                }
+                totalPreguntas++;
+                BtnSiguente.Enabled = true;
+                calculatePercentage();
+            }
+        }
         private void MnuEscribirRespuesta_Click(object sender, EventArgs e)
         {
             MnuEscribirRespuesta.Checked = true;
             MnuMultiplesOpciones.Checked = false;
+
+            TxtCapital1.ReadOnly = false;
+            TxtCapital2.Visible = false;
+            TxtCapital3.Visible = false;
+            TxtCapital4.Visible = false;
+
+            TxtCapital1.Cursor = Cursors.IBeam;
+
+            TxtCapital1.Click -= TxtCapital1_TextChanged;
+            TxtCapital1.KeyDown += TxtCapital1_KeyDown;
         }
     }
 }
