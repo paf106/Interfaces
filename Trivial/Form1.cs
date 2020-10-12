@@ -41,10 +41,10 @@ namespace Trivial
             totalPreguntas = 0;
 
             TxtPorcentajeAciertos.Clear();
-
-
         }
-
+        /// <summary>
+        /// Metodo que calcula el porcentaje de aciertos
+        /// </summary>
         public void calculatePercentage()
         {
             porcentaje = (respuestasAcertadas / totalPreguntas) * 100;
@@ -59,6 +59,7 @@ namespace Trivial
             TxtCapital1.Clear();
             TxtCapital1.BackColor = SystemColors.Control;
 
+            // Pais aleatorio
             if (MnuNombreCapitales.Checked == true && MnuEscribirRespuesta.Checked == true)
             {
                 LblPais.Text = "Pais:";
@@ -70,6 +71,7 @@ namespace Trivial
                 indicePais = numeroAleatorio;
                 TxtPais.Text = paises[numeroAleatorio];
             }
+            // Capital aleatoria
             else if (MnuNombrePaises.Checked == true && MnuEscribirRespuesta.Checked == true)
             {
                 LblPais.Text = "Capital:";
@@ -82,11 +84,10 @@ namespace Trivial
                 TxtPais.Text = capitales[numeroAleatorio];
             }
         }
-
         /// <summary>
         /// Metodo que rellena las cajas de texto con capitales aleatorias
         /// </summary>
-        public void fillTxtBoxes()
+        public void fillNombreCapitales()
         {
             LblPais.Text = "Pais:";
             LblCapital.Text = "Capitales:";
@@ -142,7 +143,7 @@ namespace Trivial
                 }
             } while (string.IsNullOrEmpty(TxtCapital1.Text) || string.IsNullOrEmpty(TxtCapital2.Text) || string.IsNullOrEmpty(TxtCapital3.Text) || string.IsNullOrEmpty(TxtCapital4.Text));
         }
-        public void fillTxtBoxesPaises()
+        public void fillNombrePaises()
         {
             LblPais.Text = "Capital:";
             LblCapital.Text = "Paises:";
@@ -197,9 +198,6 @@ namespace Trivial
                     }
                 }
             } while (string.IsNullOrEmpty(TxtCapital1.Text) || string.IsNullOrEmpty(TxtCapital2.Text) || string.IsNullOrEmpty(TxtCapital3.Text) || string.IsNullOrEmpty(TxtCapital4.Text));
-
-
-
         }
 
         public bool checkAnswer(TextBox textBox)
@@ -247,17 +245,12 @@ namespace Trivial
                 {
                     return false;
                 }
-
             }
             else
             {
                 return false;
             }
-
         }
-
-
-
         public FrmPrincipal()
         {
             InitializeComponent();
@@ -275,26 +268,23 @@ namespace Trivial
             if (MnuNombreCapitales.Checked == true && MnuMultiplesOpciones.Checked == true)
             {
                 newGame();
-                fillTxtBoxes();
+                fillNombreCapitales();
             }
             else if (MnuNombrePaises.Checked == true && MnuMultiplesOpciones.Checked == true)
             {
                 newGame();
-                fillTxtBoxesPaises();
+                fillNombrePaises();
             }
             else if (MnuNombreCapitales.Checked == true && MnuEscribirRespuesta.Checked == true)
             {
                 newGame();
                 fillEscribirRespuestas();
-                
-
             }
             else if (MnuNombrePaises.Checked == true && MnuEscribirRespuesta.Checked == true)
             {
                 newGame();
                 fillEscribirRespuestas();
             }
-
         }
 
         private void MnuSalir_Click(object sender, EventArgs e)
@@ -379,17 +369,16 @@ namespace Trivial
         {
             if (MnuNombreCapitales.Checked == true && MnuMultiplesOpciones.Checked == true)
             {
-                fillTxtBoxes();
+                fillNombreCapitales();
             }
-            else if(MnuNombrePaises.Checked == true && MnuMultiplesOpciones.Checked == true)
+            else if (MnuNombrePaises.Checked == true && MnuMultiplesOpciones.Checked == true)
             {
-                fillTxtBoxesPaises();
+                fillNombrePaises();
             }
             else
             {
                 fillEscribirRespuestas();
             }
-
         }
 
         private void BtnSalir_Click(object sender, EventArgs e)
