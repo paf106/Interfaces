@@ -52,6 +52,11 @@ namespace Trivial
             TxtPorcentajeAciertos.Text = porcentajeInt.ToString() + "%";
         }
 
+        
+
+        /// <summary>
+        /// Metodo que rellena el texbox del modo de juego "escribir respuesta"
+        /// </summary>
         public void fillEscribirRespuestas()
         {
             TxtCapital1.ReadOnly = false;
@@ -204,7 +209,7 @@ namespace Trivial
         {
             if (MnuNombreCapitales.Checked == true && MnuEscribirRespuesta.Checked == true)
             {
-                if (textBox.Text.Equals(capitales[indicePais]))
+                if (textBox.Text.Equals(capitales[indicePais], StringComparison.OrdinalIgnoreCase))
                 {
                     return true;
                 }
@@ -215,7 +220,7 @@ namespace Trivial
             }
             else if (MnuNombrePaises.Checked == true && MnuEscribirRespuesta.Checked == true)
             {
-                if (textBox.Text.Equals(paises[indicePais]))
+                if (textBox.Text.Equals(paises[indicePais], StringComparison.OrdinalIgnoreCase))
                 {
                     return true;
                 }
@@ -226,7 +231,7 @@ namespace Trivial
             }
             else if (MnuNombreCapitales.Checked == true && MnuMultiplesOpciones.Checked == true)
             {
-                if (textBox.Text.Equals(capitales[indicePais]))
+                if (textBox.Text.Equals(capitales[indicePais], StringComparison.OrdinalIgnoreCase))
                 {
                     return true;
                 }
@@ -237,7 +242,7 @@ namespace Trivial
             }
             else if (MnuNombrePaises.Checked == true && MnuMultiplesOpciones.Checked == true)
             {
-                if (textBox.Text.Equals(paises[indicePais]))
+                if (textBox.Text.Equals(paises[indicePais], StringComparison.OrdinalIgnoreCase))
                 {
                     return true;
                 }
