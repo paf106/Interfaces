@@ -48,64 +48,72 @@
             // LblTitulo
             // 
             this.LblTitulo.AutoSize = true;
-            this.LblTitulo.Location = new System.Drawing.Point(159, 46);
+            this.LblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTitulo.Location = new System.Drawing.Point(182, 72);
             this.LblTitulo.Name = "LblTitulo";
-            this.LblTitulo.Size = new System.Drawing.Size(35, 13);
+            this.LblTitulo.Size = new System.Drawing.Size(51, 20);
             this.LblTitulo.TabIndex = 0;
-            this.LblTitulo.Text = "Título";
+            this.LblTitulo.Text = "Título:";
             // 
             // LblAutor
             // 
             this.LblAutor.AutoSize = true;
-            this.LblAutor.Location = new System.Drawing.Point(159, 107);
+            this.LblAutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAutor.Location = new System.Drawing.Point(182, 131);
             this.LblAutor.Name = "LblAutor";
-            this.LblAutor.Size = new System.Drawing.Size(32, 13);
+            this.LblAutor.Size = new System.Drawing.Size(52, 20);
             this.LblAutor.TabIndex = 1;
-            this.LblAutor.Text = "Autor";
+            this.LblAutor.Text = "Autor:";
             // 
             // LblEditorial
             // 
             this.LblEditorial.AutoSize = true;
-            this.LblEditorial.Location = new System.Drawing.Point(159, 170);
+            this.LblEditorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblEditorial.Location = new System.Drawing.Point(182, 194);
             this.LblEditorial.Name = "LblEditorial";
-            this.LblEditorial.Size = new System.Drawing.Size(44, 13);
+            this.LblEditorial.Size = new System.Drawing.Size(70, 20);
             this.LblEditorial.TabIndex = 2;
-            this.LblEditorial.Text = "Editorial";
+            this.LblEditorial.Text = "Editorial:";
             // 
             // LblNuevo
             // 
             this.LblNuevo.AutoSize = true;
-            this.LblNuevo.Location = new System.Drawing.Point(159, 232);
+            this.LblNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNuevo.Location = new System.Drawing.Point(182, 250);
             this.LblNuevo.Name = "LblNuevo";
-            this.LblNuevo.Size = new System.Drawing.Size(39, 13);
+            this.LblNuevo.Size = new System.Drawing.Size(58, 20);
             this.LblNuevo.TabIndex = 3;
-            this.LblNuevo.Text = "Nuevo";
+            this.LblNuevo.Text = "Nuevo:";
             // 
             // TxtTitulo
             // 
-            this.TxtTitulo.Location = new System.Drawing.Point(256, 46);
+            this.TxtTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtTitulo.Location = new System.Drawing.Point(258, 72);
             this.TxtTitulo.Name = "TxtTitulo";
-            this.TxtTitulo.Size = new System.Drawing.Size(100, 20);
+            this.TxtTitulo.Size = new System.Drawing.Size(100, 26);
             this.TxtTitulo.TabIndex = 4;
             // 
             // TxtAutor
             // 
-            this.TxtAutor.Location = new System.Drawing.Point(256, 107);
+            this.TxtAutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtAutor.Location = new System.Drawing.Point(258, 128);
             this.TxtAutor.Name = "TxtAutor";
-            this.TxtAutor.Size = new System.Drawing.Size(100, 20);
+            this.TxtAutor.Size = new System.Drawing.Size(100, 26);
             this.TxtAutor.TabIndex = 5;
             // 
             // TxtEditorial
             // 
-            this.TxtEditorial.Location = new System.Drawing.Point(256, 170);
+            this.TxtEditorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtEditorial.Location = new System.Drawing.Point(258, 191);
             this.TxtEditorial.Name = "TxtEditorial";
-            this.TxtEditorial.Size = new System.Drawing.Size(100, 20);
+            this.TxtEditorial.Size = new System.Drawing.Size(100, 26);
             this.TxtEditorial.TabIndex = 6;
             // 
             // ChkNuevo
             // 
             this.ChkNuevo.AutoSize = true;
-            this.ChkNuevo.Location = new System.Drawing.Point(256, 232);
+            this.ChkNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChkNuevo.Location = new System.Drawing.Point(291, 254);
             this.ChkNuevo.Name = "ChkNuevo";
             this.ChkNuevo.Size = new System.Drawing.Size(15, 14);
             this.ChkNuevo.TabIndex = 7;
@@ -113,19 +121,23 @@
             // 
             // BtnGuardar
             // 
-            this.BtnGuardar.Location = new System.Drawing.Point(201, 308);
+            this.BtnGuardar.BackColor = System.Drawing.Color.LightCyan;
+            this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGuardar.Location = new System.Drawing.Point(604, 313);
             this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.BtnGuardar.Size = new System.Drawing.Size(114, 56);
             this.BtnGuardar.TabIndex = 8;
             this.BtnGuardar.Text = "Guardar";
-            this.BtnGuardar.UseVisualStyleBackColor = true;
+            this.BtnGuardar.UseVisualStyleBackColor = false;
             this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // BtnLimpiar
             // 
-            this.BtnLimpiar.Location = new System.Drawing.Point(328, 308);
+            this.BtnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLimpiar.Location = new System.Drawing.Point(244, 313);
             this.BtnLimpiar.Name = "BtnLimpiar";
-            this.BtnLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.BtnLimpiar.Size = new System.Drawing.Size(114, 56);
             this.BtnLimpiar.TabIndex = 9;
             this.BtnLimpiar.Text = "Limpiar";
             this.BtnLimpiar.UseVisualStyleBackColor = true;
@@ -133,9 +145,10 @@
             // 
             // BtnCargarFoto
             // 
-            this.BtnCargarFoto.Location = new System.Drawing.Point(514, 308);
+            this.BtnCargarFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCargarFoto.Location = new System.Drawing.Point(421, 313);
             this.BtnCargarFoto.Name = "BtnCargarFoto";
-            this.BtnCargarFoto.Size = new System.Drawing.Size(75, 23);
+            this.BtnCargarFoto.Size = new System.Drawing.Size(114, 56);
             this.BtnCargarFoto.TabIndex = 10;
             this.BtnCargarFoto.Text = "Cargar Foto";
             this.BtnCargarFoto.UseVisualStyleBackColor = true;
@@ -144,17 +157,19 @@
             // LblFotoPortada
             // 
             this.LblFotoPortada.AutoSize = true;
-            this.LblFotoPortada.Location = new System.Drawing.Point(511, 53);
+            this.LblFotoPortada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblFotoPortada.Location = new System.Drawing.Point(417, 44);
             this.LblFotoPortada.Name = "LblFotoPortada";
-            this.LblFotoPortada.Size = new System.Drawing.Size(93, 13);
+            this.LblFotoPortada.Size = new System.Drawing.Size(139, 20);
             this.LblFotoPortada.TabIndex = 11;
             this.LblFotoPortada.Text = "Foto de la portada";
             // 
             // PicImagen
             // 
-            this.PicImagen.Location = new System.Drawing.Point(491, 87);
+            this.PicImagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PicImagen.Location = new System.Drawing.Point(421, 72);
             this.PicImagen.Name = "PicImagen";
-            this.PicImagen.Size = new System.Drawing.Size(122, 123);
+            this.PicImagen.Size = new System.Drawing.Size(135, 142);
             this.PicImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicImagen.TabIndex = 12;
             this.PicImagen.TabStop = false;

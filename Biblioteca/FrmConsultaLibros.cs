@@ -17,15 +17,6 @@ namespace Biblioteca
             InitializeComponent();
         }
 
-        private void BtnCargarFoto_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void FrmConsultaLibros_Load(object sender, EventArgs e)
-        {
-        }
-
         private void RbAutor_CheckedChanged(object sender, EventArgs e)
         {
             LsbAutorEditorial.Items.Clear();
@@ -33,6 +24,7 @@ namespace Biblioteca
             {
                 LsbAutorEditorial.Items.Add(l.getAutor());
             }
+            LsbAutorEditorial.Sorted = true;
         }
 
         private void RbEditorial_CheckedChanged(object sender, EventArgs e)
@@ -42,6 +34,7 @@ namespace Biblioteca
             {
                 LsbAutorEditorial.Items.Add(l.getEditorial());
             }
+            LsbAutorEditorial.Sorted = true;
         }
 
         private void LsbAutorEditorial_SelectedIndexChanged(object sender, EventArgs e)
@@ -67,11 +60,7 @@ namespace Biblioteca
                 }
                 
             }
-        }
-
-        private void LsbTitulo_DoubleClick(object sender, EventArgs e)
-        {
-            
+            LsbTitulo.Sorted = true;
         }
 
         private void LsbTitulo_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -88,14 +77,13 @@ namespace Biblioteca
                     try {
                         Bitmap imagen = new Bitmap(libro.getFoto());
                         PicFotoLibro.Image = imagen;
-                    }catch ( ArgumentException efe)
+                    }catch ( ArgumentException ex)
                     {
                         MessageBox.Show("Imagen no encontrada");
                     }
-                    
-
                 }
             }
         }
+
     }
 }

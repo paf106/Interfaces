@@ -45,9 +45,10 @@
             // 
             this.GbTipoConsulta.Controls.Add(this.RbEditorial);
             this.GbTipoConsulta.Controls.Add(this.RbAutor);
-            this.GbTipoConsulta.Location = new System.Drawing.Point(119, 58);
+            this.GbTipoConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GbTipoConsulta.Location = new System.Drawing.Point(210, 51);
             this.GbTipoConsulta.Name = "GbTipoConsulta";
-            this.GbTipoConsulta.Size = new System.Drawing.Size(332, 68);
+            this.GbTipoConsulta.Size = new System.Drawing.Size(176, 74);
             this.GbTipoConsulta.TabIndex = 2;
             this.GbTipoConsulta.TabStop = false;
             this.GbTipoConsulta.Text = "Tipo consulta";
@@ -57,7 +58,7 @@
             this.RbEditorial.AutoSize = true;
             this.RbEditorial.Location = new System.Drawing.Point(19, 42);
             this.RbEditorial.Name = "RbEditorial";
-            this.RbEditorial.Size = new System.Drawing.Size(62, 17);
+            this.RbEditorial.Size = new System.Drawing.Size(84, 24);
             this.RbEditorial.TabIndex = 1;
             this.RbEditorial.Text = "Editorial";
             this.RbEditorial.UseVisualStyleBackColor = true;
@@ -68,7 +69,7 @@
             this.RbAutor.AutoSize = true;
             this.RbAutor.Location = new System.Drawing.Point(19, 19);
             this.RbAutor.Name = "RbAutor";
-            this.RbAutor.Size = new System.Drawing.Size(50, 17);
+            this.RbAutor.Size = new System.Drawing.Size(66, 24);
             this.RbAutor.TabIndex = 0;
             this.RbAutor.Text = "Autor";
             this.RbAutor.UseVisualStyleBackColor = true;
@@ -76,54 +77,62 @@
             // 
             // LsbTitulo
             // 
+            this.LsbTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LsbTitulo.FormattingEnabled = true;
-            this.LsbTitulo.Location = new System.Drawing.Point(119, 224);
+            this.LsbTitulo.ItemHeight = 16;
+            this.LsbTitulo.Location = new System.Drawing.Point(123, 199);
             this.LsbTitulo.Name = "LsbTitulo";
-            this.LsbTitulo.Size = new System.Drawing.Size(120, 95);
+            this.LsbTitulo.Size = new System.Drawing.Size(120, 84);
             this.LsbTitulo.TabIndex = 3;
             this.LsbTitulo.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.LsbTitulo_MouseDoubleClick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(116, 191);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(120, 166);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(51, 20);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Título";
+            this.label1.Text = "Título:";
             // 
             // LsbAutorEditorial
             // 
+            this.LsbAutorEditorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LsbAutorEditorial.FormattingEnabled = true;
-            this.LsbAutorEditorial.Location = new System.Drawing.Point(331, 224);
+            this.LsbAutorEditorial.ItemHeight = 16;
+            this.LsbAutorEditorial.Location = new System.Drawing.Point(309, 199);
             this.LsbAutorEditorial.Name = "LsbAutorEditorial";
-            this.LsbAutorEditorial.Size = new System.Drawing.Size(120, 95);
+            this.LsbAutorEditorial.Size = new System.Drawing.Size(120, 84);
             this.LsbAutorEditorial.TabIndex = 5;
             this.LsbAutorEditorial.SelectedIndexChanged += new System.EventHandler(this.LsbAutorEditorial_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(328, 191);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(305, 166);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 13);
+            this.label2.Size = new System.Drawing.Size(121, 20);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Autor / Editorial";
+            this.label2.Text = "Autor / Editorial:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(552, 191);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(510, 133);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 13);
+            this.label3.Size = new System.Drawing.Size(101, 20);
             this.label3.TabIndex = 7;
             this.label3.Text = "Foto portada";
             // 
             // PicFotoLibro
             // 
-            this.PicFotoLibro.Location = new System.Drawing.Point(524, 224);
+            this.PicFotoLibro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PicFotoLibro.Location = new System.Drawing.Point(514, 166);
             this.PicFotoLibro.Name = "PicFotoLibro";
-            this.PicFotoLibro.Size = new System.Drawing.Size(122, 123);
+            this.PicFotoLibro.Size = new System.Drawing.Size(135, 142);
             this.PicFotoLibro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicFotoLibro.TabIndex = 8;
             this.PicFotoLibro.TabStop = false;
@@ -146,7 +155,6 @@
             this.ShowInTaskbar = false;
             this.Text = "Consulta de libros";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.FrmConsultaLibros_Load);
             this.GbTipoConsulta.ResumeLayout(false);
             this.GbTipoConsulta.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicFotoLibro)).EndInit();
