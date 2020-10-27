@@ -47,11 +47,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cliente.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="FrmConsultaTree.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FrmConsultaTree.Designer.cs">
+      <DependentUpon>FrmConsultaTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPadre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPadre.Designer.cs">
+      <DependentUpon>FrmPadre.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmAlta.cs">
       <SubType>Form</SubType>
@@ -59,10 +65,19 @@
     <Compile Include="FrmAlta.Designer.cs">
       <DependentUpon>FrmAlta.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmConsultaList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaList.Designer.cs">
+      <DependentUpon>FrmConsultaList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FrmConsultaList.resx">
+      <DependentUpon>FrmConsultaList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPadre.resx">
+      <DependentUpon>FrmPadre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAlta.resx">
       <DependentUpon>FrmAlta.cs</DependentUpon>

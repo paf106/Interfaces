@@ -229,6 +229,7 @@
             this.PicFoto.Location = new System.Drawing.Point(510, 65);
             this.PicFoto.Name = "PicFoto";
             this.PicFoto.Size = new System.Drawing.Size(161, 119);
+            this.PicFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicFoto.TabIndex = 2;
             this.PicFoto.TabStop = false;
             this.PicFoto.DoubleClick += new System.EventHandler(this.PicFoto_DoubleClick);
