@@ -34,6 +34,7 @@
             this.MnuConsultaList = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuConsultaTree = new System.Windows.Forms.ToolStripMenuItem();
             this.iLImagenes = new System.Windows.Forms.ImageList(this.components);
+            this.MnuSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,7 +43,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MnuAlta,
             this.MnuConsultaList,
-            this.MnuConsultaTree});
+            this.MnuConsultaTree,
+            this.MnuSalir});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -76,6 +78,13 @@
             this.iLImagenes.ImageSize = new System.Drawing.Size(16, 16);
             this.iLImagenes.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // MnuSalir
+            // 
+            this.MnuSalir.Name = "MnuSalir";
+            this.MnuSalir.Size = new System.Drawing.Size(41, 20);
+            this.MnuSalir.Text = "Salir";
+            this.MnuSalir.Click += new System.EventHandler(this.MnuSalir_Click);
+            // 
             // FrmPadre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -84,7 +93,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmPadre";
-            this.Text = "Form1";
+            this.Text = "Padre";
             this.Load += new System.EventHandler(this.FrmPadre_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -100,6 +109,7 @@
         private System.Windows.Forms.ToolStripMenuItem MnuConsultaList;
         private System.Windows.Forms.ToolStripMenuItem MnuConsultaTree;
         private System.Windows.Forms.ImageList iLImagenes;
+        private System.Windows.Forms.ToolStripMenuItem MnuSalir;
     }
 }
 

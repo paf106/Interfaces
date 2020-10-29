@@ -28,7 +28,6 @@ namespace PracticaHerencia
             txtComentario.Clear();
             chkVip.Checked = false;
             PicFoto.Image = null;
-
         }
         /// <summary>
         /// Refresca la listbox
@@ -40,7 +39,6 @@ namespace PracticaHerencia
             {
                 lbClientes.Items.Add(c.getNombre());
             }
-            lbClientes.Sorted = true;
         }
         private void FrmAlta_Load(object sender, EventArgs e)
         {

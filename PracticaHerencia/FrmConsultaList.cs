@@ -20,14 +20,14 @@ namespace PracticaHerencia
 
         private void FrmConsultaList_Load(object sender, EventArgs e)
         {
-            
-            foreach(Cliente c in FrmPadre.clientes)
+            cbVista.SelectedIndex = 0;
+
+            foreach (Cliente c in FrmPadre.clientes)
             {
                 if (!cbCiudad.Items.Contains(c.getCiudad()))
                 {
                     cbCiudad.Items.Add(c.getCiudad());
                 }
-                
             }
         }
 

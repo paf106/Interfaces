@@ -49,7 +49,7 @@ namespace PracticaHerencia
 
 
         }
-
+        
         private void MnuConsultaList_Click(object sender, EventArgs e)
         {
             bool encontrado = false;
@@ -87,5 +87,10 @@ namespace PracticaHerencia
                 this.Hide();
             }
         }
+
+        private void MnuSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+;        }
     }
 }

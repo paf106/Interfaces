@@ -220,6 +220,7 @@
             this.lbClientes.Location = new System.Drawing.Point(58, 93);
             this.lbClientes.Name = "lbClientes";
             this.lbClientes.Size = new System.Drawing.Size(266, 212);
+            this.lbClientes.Sorted = true;
             this.lbClientes.TabIndex = 16;
             this.lbClientes.SelectedIndexChanged += new System.EventHandler(this.lbClientes_SelectedIndexChanged);
             // 

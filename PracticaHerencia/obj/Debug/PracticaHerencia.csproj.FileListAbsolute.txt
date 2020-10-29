@@ -10,3 +10,4 @@ C:\Users\alumno\Desktop\Interfaces\PracticaHerencia\obj\Debug\PracticaHerencia.e
 C:\Users\alumno\Desktop\Interfaces\PracticaHerencia\obj\Debug\PracticaHerencia.pdb
 C:\Users\alumno\Desktop\Interfaces\PracticaHerencia\obj\Debug\PracticaHerencia.FrmAlta.resources
 C:\Users\alumno\Desktop\Interfaces\PracticaHerencia\obj\Debug\PracticaHerencia.FrmConsultaList.resources
+C:\Users\alumno\Desktop\Interfaces\PracticaHerencia\obj\Debug\PracticaHerencia.FrmConsultaTree.resources

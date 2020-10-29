@@ -76,6 +76,9 @@
     <EmbeddedResource Include="FrmConsultaList.resx">
       <DependentUpon>FrmConsultaList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaTree.resx">
+      <DependentUpon>FrmConsultaTree.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPadre.resx">
       <DependentUpon>FrmPadre.cs</DependentUpon>
     </EmbeddedResource>
