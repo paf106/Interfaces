@@ -28,6 +28,7 @@ namespace PracticaHerencia
             txtComentario.Clear();
             chkVip.Checked = false;
             PicFoto.Image = null;
+
         }
         /// <summary>
         /// Refresca la listbox
@@ -124,7 +125,9 @@ namespace PracticaHerencia
                 {
                     // Asignamos la misma referencia de memoria al cliente temporal para su posterior eliminación
                     clienteTemp = c;
+                    
                 }
+                
             }
 
             txtNombre.Text = clienteTemp.getNombre();

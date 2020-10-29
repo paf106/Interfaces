@@ -56,6 +56,7 @@ namespace PracticaHerencia
         private void tvClientes_AfterSelect(object sender, TreeViewEventArgs e)
         {
             clearForm();
+            //Evita que se cambie la foto del nodo
             tvClientes.SelectedImageIndex = tvClientes.SelectedNode.ImageIndex;
 
             // Nombre del cliente seleccionado
