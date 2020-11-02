@@ -83,9 +83,29 @@ namespace Arkanoid.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap barra {
+            get {
+                object obj = ResourceManager.GetObject("barra", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap signo_menos {
             get {
                 object obj = ResourceManager.GetObject("signo-menos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap signo_menos_de_barra_horizontal {
+            get {
+                object obj = ResourceManager.GetObject("signo-menos-de-barra-horizontal", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

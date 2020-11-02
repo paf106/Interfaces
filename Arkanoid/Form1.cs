@@ -17,6 +17,7 @@ namespace Arkanoid
         {
             InitializeComponent();
         }
+
         /// <summary>
         /// Cambia la dirección de la pelota en funcion del número que le pasemos por parámetro
         /// </summary>
@@ -32,35 +33,82 @@ namespace Arkanoid
                     // Choque pared arriba
                     if (picPelota.Top == 0)
                     {
-                        direccion=
+                        direccion = 4;
+                    }
+                    // Choque pared izquierda
+                    if (picPelota.Left == 0)
+                    {
+                        direccion = 2;
                     }
                     break;
                 case 2:
                     // Para mover la pelota
                     picPelota.Left = picPelota.Left + 1;
                     picPelota.Top = picPelota.Top - 1;
+
+                    // Choque pared arriba
+                    if (picPelota.Top == 0)
+                    {
+                        direccion = 3;
+                    }
+                    // Choque pared derecha
+                    if (picPelota.Location.X == 727)
+                    {
+                        direccion = 1;
+                    }
                     break;
-                // choque pared derecha
-                // si pelota.left
                 case 3:
+
                     // Para mover la pelota
                     picPelota.Left = picPelota.Left + 1;
                     picPelota.Top = picPelota.Top + 1;
+
+                    // Choque pared derecha
+                    if (picPelota.Location.X == 727)
+                    {
+                        direccion = 4;
+                    }
+                    // Choque pared bottom
+                    if (picPelota.Location.Y == 386)
+                    {
+                        direccion = 2;
+                    }
                     break;
-                // choque pared derecha
-                // si pelota.left
+
                 case 4:
                     // Para mover la pelota
                     picPelota.Left = picPelota.Left - 1;
                     picPelota.Top = picPelota.Top + 1;
+
+                    // Choque pared izquierda
+                    if (picPelota.Location.X == 0)
+                    {
+                        direccion = 3;
+                    }
+                    // Choque pared bottom
+                    if (picPelota.Location.Y == 386)
+                    {
+                        direccion = 1;
+                    }
                     break;
-                    // choque pared derecha
-                    // si pelota.left
+
             }
         }
-        private void timer1_Tick(object sender, EventArgs e)
+        private void timerPelota_Tick(object sender, EventArgs e)
         {
             changeDirection(direccion);
+        }
+
+        private void FrmPrincipal_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Right)
+            {
+                picBarra.Left = picBarra.Left + 15;
+            }
+            if (e.KeyCode == Keys.Left)
+            {
+                picBarra.Left = picBarra.Left - 15;
+            }
         }
     }
 }

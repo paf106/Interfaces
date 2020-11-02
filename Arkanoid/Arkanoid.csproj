@@ -89,5 +89,11 @@
   <ItemGroup>
     <None Include="Resources\signo-menos.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signo-menos-de-barra-horizontal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barra.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
