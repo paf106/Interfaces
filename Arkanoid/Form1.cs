@@ -30,6 +30,8 @@ namespace Arkanoid
                     picPelota.Left = picPelota.Left - 1;
                     picPelota.Top = picPelota.Top - 1;
 
+                    
+
                     // Choque pared arriba
                     if (picPelota.Top == 0)
                     {
@@ -63,6 +65,11 @@ namespace Arkanoid
                     picPelota.Left = picPelota.Left + 1;
                     picPelota.Top = picPelota.Top + 1;
 
+                    if (picPelota.Bottom >= picBarra.Top && picPelota.Bottom <= picBarra.Bottom && picPelota.Left >= picBarra.Left && picPelota.Right <= picBarra.Right)
+                    {
+                        direccion = 2;
+                    }
+
                     // Choque pared derecha
                     if (picPelota.Location.X == 727)
                     {
@@ -79,6 +86,11 @@ namespace Arkanoid
                     // Para mover la pelota
                     picPelota.Left = picPelota.Left - 1;
                     picPelota.Top = picPelota.Top + 1;
+
+                    if (picPelota.Bottom >= picBarra.Top && picPelota.Bottom <= picBarra.Bottom && picPelota.Left >= picBarra.Left && picPelota.Right <= picBarra.Right)
+                    {
+                        direccion = 1;
+                    }
 
                     // Choque pared izquierda
                     if (picPelota.Location.X == 0)
@@ -101,14 +113,15 @@ namespace Arkanoid
 
         private void FrmPrincipal_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Right)
-            {
-                picBarra.Left = picBarra.Left + 15;
-            }
-            if (e.KeyCode == Keys.Left)
-            {
-                picBarra.Left = picBarra.Left - 15;
-            }
+                if (e.KeyCode == Keys.Right)
+                {
+                    picBarra.Left = picBarra.Left + 15;
+                }
+                if (e.KeyCode == Keys.Left)
+                {
+                    picBarra.Left = picBarra.Left - 15;
+                }
+                
         }
     }
 }
