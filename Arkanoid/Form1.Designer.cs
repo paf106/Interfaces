@@ -45,9 +45,9 @@
             // picBarra
             // 
             this.picBarra.Image = global::Arkanoid.Properties.Resources.barra;
-            this.picBarra.Location = new System.Drawing.Point(319, 372);
+            this.picBarra.Location = new System.Drawing.Point(297, 363);
             this.picBarra.Name = "picBarra";
-            this.picBarra.Size = new System.Drawing.Size(161, 30);
+            this.picBarra.Size = new System.Drawing.Size(161, 29);
             this.picBarra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBarra.TabIndex = 1;
             this.picBarra.TabStop = false;
@@ -55,7 +55,7 @@
             // picPelota
             // 
             this.picPelota.Image = global::Arkanoid.Properties.Resources.baloncesto__1_;
-            this.picPelota.Location = new System.Drawing.Point(319, 147);
+            this.picPelota.Location = new System.Drawing.Point(240, 140);
             this.picPelota.Name = "picPelota";
             this.picPelota.Size = new System.Drawing.Size(64, 64);
             this.picPelota.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
