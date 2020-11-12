@@ -244,7 +244,7 @@
             // pbClientes
             // 
             this.pbClientes.Location = new System.Drawing.Point(0, 463);
-            this.pbClientes.Maximum = 126;
+            this.pbClientes.Maximum = 60;
             this.pbClientes.Name = "pbClientes";
             this.pbClientes.Size = new System.Drawing.Size(933, 23);
             this.pbClientes.TabIndex = 5;
@@ -415,6 +415,7 @@
             // pbPedidos
             // 
             this.pbPedidos.Location = new System.Drawing.Point(0, 463);
+            this.pbPedidos.Maximum = 60;
             this.pbPedidos.Name = "pbPedidos";
             this.pbPedidos.Size = new System.Drawing.Size(933, 23);
             this.pbPedidos.TabIndex = 6;
@@ -518,7 +519,7 @@
             // mnuFuente
             // 
             this.mnuFuente.Name = "mnuFuente";
-            this.mnuFuente.Size = new System.Drawing.Size(180, 22);
+            this.mnuFuente.Size = new System.Drawing.Size(110, 22);
             this.mnuFuente.Text = "Fuente";
             this.mnuFuente.Click += new System.EventHandler(this.mnuFuente_Click);
             // 

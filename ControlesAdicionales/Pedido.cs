@@ -13,9 +13,9 @@ namespace ControlesAdicionales
         private string Nif;
         private string Nombre;
         private string Apellidos;
-        private ListBox.ObjectCollection pedidos;
+        private ArrayList pedidos;
 
-        public Pedido(string nif, string nombre, string apellidos, ListBox.ObjectCollection pedidos)
+        public Pedido(string nif, string nombre, string apellidos, ArrayList pedidos)
         {
             Nif = nif;
             Nombre = nombre;
@@ -47,11 +47,11 @@ namespace ControlesAdicionales
         {
             return this.Nif;
         }
-        public ListBox.ObjectCollection getPedidos(ListBox.ObjectCollection pedidos)
+        public ArrayList getPedidos()
         {
             return this.pedidos;
         }
-        public void setPedido()
+        public void setPedido(ArrayList pedidos)
         {
             this.pedidos = pedidos;
         }

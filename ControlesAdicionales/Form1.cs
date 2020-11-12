@@ -13,26 +13,23 @@ namespace ControlesAdicionales
 {
     public partial class frmPrincipal : Form
     {
-        // atributo para asignar automaticamente el ID a cada cliente
+        // atributo para asignar automaticamente el ID a cada cliente y pedido
         private int idClienteActual = 0;
-
-        //TODO
-        // mnuGuardar en la pestaña pedidos, Que hace?
-        // ErrorProvider
+        private int idPedidoActual = 0;
 
         private SortedList<int, Cliente> clientes = new SortedList<int, Cliente>();
+        private SortedList<int, Pedido> pedidos = new SortedList<int, Pedido>();
 
         public frmPrincipal()
         {
             InitializeComponent();
         }
         /// <summary>
-        /// Limpia el formulario de un TabControl
+        /// Limpia el formulario
         /// </summary>
-        /// <param name="tab"></param>
-        public void clearForm(TabControl tab)
+        public void clearForm()
         {
-            if (tab.SelectedTab.Text.Equals("Clientes"))
+            if (tabClientesPedidos.SelectedTab.Text.Equals("Clientes"))
             {
                 txtNombre.Clear();
                 txtApellidos.Clear();
@@ -40,6 +37,7 @@ namespace ControlesAdicionales
                 txtCodigoPostal.Clear();
                 txtDireccion.Clear();
                 txtNif.Clear();
+                errorProvider1.Clear();
             }
             else
             {
@@ -47,6 +45,7 @@ namespace ControlesAdicionales
                 txtPedidosApellidos.Clear();
                 txtPedidosNif.Clear();
                 lbPedidos.Items.Clear();
+                errorProvider1.Clear();
             }
         }
         public bool checkForm()
@@ -60,6 +59,7 @@ namespace ControlesAdicionales
                 }
                 else
                 {
+                    errorProvider1.Clear();
                     return true;
                 }
             }
@@ -71,6 +71,7 @@ namespace ControlesAdicionales
                 }
                 else
                 {
+                    errorProvider1.Clear();
                     return true;
                 }
             }
@@ -106,7 +107,7 @@ namespace ControlesAdicionales
 
         private void mnuLimpiar_Click(object sender, EventArgs e)
         {
-            clearForm(tabClientesPedidos);
+            clearForm();
         }
 
         private void mnuGuardar_Click(object sender, EventArgs e)
@@ -132,14 +133,19 @@ namespace ControlesAdicionales
                 if (checkForm())
                 {
                     // Formulario sin errores
-                    //idClienteActual++;
-                    //clientes.Add(idClienteActual, new Cliente(txtNombre.Text, txtApellidos.Text, txtFechaNacimiento.Text, txtNif.Text, txtDireccion.Text, txtCodigoPostal.Text));
-                    //timer1.Start();
+                    idPedidoActual++;
+                    ArrayList arrayTemp = new ArrayList();
+                    foreach (string item in lbPedidos.Items)
+                    {
+                        arrayTemp.Add(item);
+                    }
+                    pedidos.Add(idPedidoActual, new Pedido(txtPedidosNif.Text,txtPedidosNombre.Text,txtPedidosApellidos.Text,arrayTemp));
+                    timer1.Start();
                 }
                 else
                 {
                     // Formulario con algún dato incompleto
-                    errorProvider1.SetError(tabClientesPedidos, "Hay campos sin rellenar");
+                    errorProvider1.SetError(nudPedido, "Hay campos sin rellenar");
                 }
             }
         }
@@ -184,7 +190,7 @@ namespace ControlesAdicionales
             }
             catch (KeyNotFoundException f)
             {
-                clearForm(tabClientesPedidos);
+                clearForm();
             }
 
 
@@ -202,7 +208,7 @@ namespace ControlesAdicionales
                 {
                     timer1.Stop();
                     MessageBox.Show("Cliente guardado");
-                    clearForm(tabClientesPedidos);
+                    clearForm();
                     pbClientes.Value = 0;
                 }
             }
@@ -216,6 +222,7 @@ namespace ControlesAdicionales
                 {
                     timer1.Stop();
                     MessageBox.Show("Pedido guardado");
+                    clearForm();
                     pbPedidos.Value = 0;
                 }
             }
@@ -251,14 +258,18 @@ namespace ControlesAdicionales
 
             try
             {
-                txtPedidosNif.Text = clientes[valorIdPedido].getNif();
-                txtPedidosApellidos.Text = clientes[valorIdPedido].getApellidos();
-                txtPedidosNombre.Text = clientes[valorIdPedido].getNombre();
-                //lbPedidos.Items = pedidos[valorIdPedido].getPedidos();
+                lbPedidos.Items.Clear();
+                txtPedidosNif.Text = pedidos[valorIdPedido].getNif();
+                txtPedidosApellidos.Text = pedidos[valorIdPedido].getApellidos();
+                txtPedidosNombre.Text = pedidos[valorIdPedido].getNombre();
+                foreach (string s in pedidos[valorIdPedido].getPedidos())
+                {
+                    lbPedidos.Items.Add(s);
+                }
             }
             catch (KeyNotFoundException f)
             {
-                clearForm(tabClientesPedidos);
+                clearForm();
             }
         }
 
