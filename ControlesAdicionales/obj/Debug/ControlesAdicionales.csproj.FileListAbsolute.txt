@@ -8,3 +8,13 @@ D:\Desktop\INSTITUTO\DAM\DAM2\INTERFACES\ControlesAdicionales\obj\Debug\Controle
 D:\Desktop\INSTITUTO\DAM\DAM2\INTERFACES\ControlesAdicionales\obj\Debug\ControlesAdicionales.csproj.CoreCompileInputs.cache
 D:\Desktop\INSTITUTO\DAM\DAM2\INTERFACES\ControlesAdicionales\obj\Debug\ControlesAdicionales.exe
 D:\Desktop\INSTITUTO\DAM\DAM2\INTERFACES\ControlesAdicionales\obj\Debug\ControlesAdicionales.pdb
+D:\Desktop\INSTITUTO\DAM\DAM2\INTERFACES\Interfaces\ControlesAdicionales\bin\Debug\ControlesAdicionales.exe.config
+D:\Desktop\INSTITUTO\DAM\DAM2\INTERFACES\Interfaces\ControlesAdicionales\bin\Debug\ControlesAdicionales.exe
+D:\Desktop\INSTITUTO\DAM\DAM2\INTERFACES\Interfaces\ControlesAdicionales\bin\Debug\ControlesAdicionales.pdb
+D:\Desktop\INSTITUTO\DAM\DAM2\INTERFACES\Interfaces\ControlesAdicionales\obj\Debug\ControlesAdicionales.csprojAssemblyReference.cache
+D:\Desktop\INSTITUTO\DAM\DAM2\INTERFACES\Interfaces\ControlesAdicionales\obj\Debug\ControlesAdicionales.Properties.Resources.resources
+D:\Desktop\INSTITUTO\DAM\DAM2\INTERFACES\Interfaces\ControlesAdicionales\obj\Debug\ControlesAdicionales.csproj.GenerateResource.cache
+D:\Desktop\INSTITUTO\DAM\DAM2\INTERFACES\Interfaces\ControlesAdicionales\obj\Debug\ControlesAdicionales.csproj.CoreCompileInputs.cache
+D:\Desktop\INSTITUTO\DAM\DAM2\INTERFACES\Interfaces\ControlesAdicionales\obj\Debug\ControlesAdicionales.exe
+D:\Desktop\INSTITUTO\DAM\DAM2\INTERFACES\Interfaces\ControlesAdicionales\obj\Debug\ControlesAdicionales.pdb
+D:\Desktop\INSTITUTO\DAM\DAM2\INTERFACES\Interfaces\ControlesAdicionales\obj\Debug\ControlesAdicionales.frmPrincipal.resources
