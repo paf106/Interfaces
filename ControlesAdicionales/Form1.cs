@@ -79,10 +79,8 @@ namespace ControlesAdicionales
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
             this.linkLabel1.LinkVisited = true;
             System.Diagnostics.Process.Start("https://www.trekbikes.com/es/es_ES/");
-
         }
 
         private void mnuMaximizar_Click(object sender, EventArgs e)
@@ -126,7 +124,7 @@ namespace ControlesAdicionales
                     // Formulario con algún dato incompleto
                     errorProvider1.SetError(nudCliente, "Hay campos sin rellenar");
                 }
-                
+
             }
             else
             {
@@ -139,7 +137,7 @@ namespace ControlesAdicionales
                     {
                         arrayTemp.Add(item);
                     }
-                    pedidos.Add(idPedidoActual, new Pedido(txtPedidosNif.Text,txtPedidosNombre.Text,txtPedidosApellidos.Text,arrayTemp));
+                    pedidos.Add(idPedidoActual, new Pedido(txtPedidosNif.Text, txtPedidosNombre.Text, txtPedidosApellidos.Text, arrayTemp));
                     timer1.Start();
                 }
                 else
@@ -192,8 +190,6 @@ namespace ControlesAdicionales
             {
                 clearForm();
             }
-
-
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -247,7 +243,7 @@ namespace ControlesAdicionales
             if (fontDialog1.ShowDialog() == DialogResult.OK)
                 foreach (Control c in Controls)
                 {
-                    c.Font =  fontDialog1.Font;
+                    c.Font = fontDialog1.Font;
                 }
         }
 
@@ -273,26 +269,6 @@ namespace ControlesAdicionales
             }
         }
 
-        private void txtPedidosNif_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                foreach (KeyValuePair<int, Cliente> client in clientes)
-                {
-                    if (txtPedidosNif.Text.Equals(client.Value.getNif()))
-                    {
-                        txtPedidosApellidos.Text = client.Value.getApellidos();
-                        txtPedidosNombre.Text = client.Value.getNombre();
-                    }
-                    else
-                    {
-                        MessageBox.Show("No se ha encotrado ningun cliente con ID: " + txtPedidosNif.Text);
-                    }
-                }
-            }
-
-        }
-
         private void lbPedidos_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.Text))
@@ -309,6 +285,24 @@ namespace ControlesAdicionales
         {
             lbPedidos.Items.Add(e.Data.GetData(DataFormats.Text));
             lbBicicletas.Items.Remove(e.Data.GetData(DataFormats.Text));
+        }
+
+        private void txtPedidosNif_TextChanged(object sender, EventArgs e)
+        {
+            foreach (var client in clientes)
+            {
+                if (txtPedidosNif.Text.Equals(client.Value.getNif()))
+                {
+                    txtPedidosApellidos.Text = client.Value.getApellidos();
+                    txtPedidosNombre.Text = client.Value.getNombre();
+                }
+                else
+                {
+                    txtPedidosApellidos.Clear();
+                    txtPedidosNombre.Clear();
+                }
+            }
+
         }
     }
 }

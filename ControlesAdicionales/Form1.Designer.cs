@@ -378,7 +378,7 @@
             this.txtPedidosNif.Size = new System.Drawing.Size(160, 20);
             this.txtPedidosNif.TabIndex = 2;
             this.toolTip1.SetToolTip(this.txtPedidosNif, "NIF del cliente");
-            this.txtPedidosNif.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPedidosNif_KeyDown);
+            this.txtPedidosNif.TextChanged += new System.EventHandler(this.txtPedidosNif_TextChanged);
             // 
             // nudPedido
             // 

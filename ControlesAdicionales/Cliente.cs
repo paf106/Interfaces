@@ -25,6 +25,10 @@ namespace ControlesAdicionales
             CodigoPostal = codigoPostal;
         }
 
+        public Cliente()
+        {
+        }
+
         public void setNombre(string Nombre)
         {
             this.Nombre = Nombre;
