@@ -1,0 +1,10 @@
+D:\Desktop\INSTITUTO\DAM\DAM2\INTERFACES\Interfaces\Reloj\bin\Debug\Reloj.exe.config
+D:\Desktop\INSTITUTO\DAM\DAM2\INTERFACES\Interfaces\Reloj\bin\Debug\Reloj.exe
+D:\Desktop\INSTITUTO\DAM\DAM2\INTERFACES\Interfaces\Reloj\bin\Debug\Reloj.pdb
+D:\Desktop\INSTITUTO\DAM\DAM2\INTERFACES\Interfaces\Reloj\obj\Debug\Reloj.csprojAssemblyReference.cache
+D:\Desktop\INSTITUTO\DAM\DAM2\INTERFACES\Interfaces\Reloj\obj\Debug\Reloj.frmPrincipal.resources
+D:\Desktop\INSTITUTO\DAM\DAM2\INTERFACES\Interfaces\Reloj\obj\Debug\Reloj.Properties.Resources.resources
+D:\Desktop\INSTITUTO\DAM\DAM2\INTERFACES\Interfaces\Reloj\obj\Debug\Reloj.csproj.GenerateResource.cache
+D:\Desktop\INSTITUTO\DAM\DAM2\INTERFACES\Interfaces\Reloj\obj\Debug\Reloj.csproj.CoreCompileInputs.cache
+D:\Desktop\INSTITUTO\DAM\DAM2\INTERFACES\Interfaces\Reloj\obj\Debug\Reloj.exe
+D:\Desktop\INSTITUTO\DAM\DAM2\INTERFACES\Interfaces\Reloj\obj\Debug\Reloj.pdb
