@@ -1,0 +1,11 @@
+D:\Desktop\INSTITUTO\DAM\DAM2\INTERFACES\Interfaces\Explorer\bin\Debug\Explorer.exe.config
+D:\Desktop\INSTITUTO\DAM\DAM2\INTERFACES\Interfaces\Explorer\bin\Debug\Explorer.exe
+D:\Desktop\INSTITUTO\DAM\DAM2\INTERFACES\Interfaces\Explorer\bin\Debug\Explorer.pdb
+D:\Desktop\INSTITUTO\DAM\DAM2\INTERFACES\Interfaces\Explorer\obj\Debug\Explorer.csprojAssemblyReference.cache
+D:\Desktop\INSTITUTO\DAM\DAM2\INTERFACES\Interfaces\Explorer\obj\Debug\Explorer.frmPrincipal.resources
+D:\Desktop\INSTITUTO\DAM\DAM2\INTERFACES\Interfaces\Explorer\obj\Debug\Explorer.Properties.Resources.resources
+D:\Desktop\INSTITUTO\DAM\DAM2\INTERFACES\Interfaces\Explorer\obj\Debug\Explorer.csproj.GenerateResource.cache
+D:\Desktop\INSTITUTO\DAM\DAM2\INTERFACES\Interfaces\Explorer\obj\Debug\Explorer.csproj.CoreCompileInputs.cache
+D:\Desktop\INSTITUTO\DAM\DAM2\INTERFACES\Interfaces\Explorer\obj\Debug\Explorer.exe
+D:\Desktop\INSTITUTO\DAM\DAM2\INTERFACES\Interfaces\Explorer\obj\Debug\Explorer.pdb
+D:\Desktop\INSTITUTO\DAM\DAM2\INTERFACES\Interfaces\Explorer\obj\Debug\Explorer.VisorArchivosTexto.resources
